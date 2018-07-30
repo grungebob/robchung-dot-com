@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './assets/logo.png';
+// import logo from './assets/logo.png';
 import './App.css';
 import Shelf from './components/Shelf.js';
 import data from './dummy_data.js';
@@ -22,9 +22,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title" >Robert Chung</h1>
+        <header className="App-header"> 
+        <h1 className="App-title">ROBERT CHUNG</h1>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          {/* <h1 className="App-title" >Robert Chung</h1> */}
         </header>
         <p className="App-intro">
           Full-Stack Software Engineering Dude from Pittsburgh<br/>
