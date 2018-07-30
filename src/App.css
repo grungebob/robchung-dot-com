@@ -1,0 +1,228 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-image: url("./assets/background.png");
+  background-color: #222;
+  height: 30vh;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 4em;
+  font-family: NYCBold;
+}
+
+.App-intro {
+  font-size: large;
+  font-size: 2em;
+  font-family: 'BebasNeue', Fallback, sans-serif;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@font-face {
+  font-family: BebasNeue;
+  src: url("https://d1fsi47in3678q.cloudfront.net/fonts/BebasNeue-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: NYCBold;
+  src: url("https://www.nycgo.com/assets/fonts/nyc_sans/NYCSans-BoldWeb.woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: proxima-nova;
+  src: url("https://use.typekit.net/af/71f83c/00000000000000003b9b093b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2") format("opentype");
+  font-style: thin;
+  font-weight: 200;
+}
+
+.shoe {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-wrap:break-word
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+    height: 65px;
+    white-space: pre;
+    word-wrap: break-word;
+}
+
+table#table1 {
+  width:90%; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #509e2f;
+}
+
+.container:hover .overlay {
+  opacity: .9;
+}
+
+.shoe-info {
+  font-family: 'proxima-nova', Fallback, sans-serif;
+  color: white;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.shoe-button {
+  padding:15px 16px 15px 16px;
+  margin:0;
+  text-align: center;
+  border-radius:5px;
+  border: none;
+  font-size: 4vh;
+  font-family:BebasNeue;
+  letter-spacing:2px;
+  height:30px;
+  width: 75px;
+  color: #ffffff;
+  background-color:#509e2f;
+  padding:10px 15px
+ }
+
+ .shoe-button.remove{
+  background-color:#ff5a5f;
+ }
+
+
+/* ==== The Modal: =====
+Background */
+
+.modal-edit {
+  position: relative;
+  background-color: #fefefe;
+  padding: 0;
+  border: 1px solid #888;
+  width: 95%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+input[type=text] {
+  border-radius: 10px;  
+  width: 60%;
+  color: #5cb85c;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  font-size: 2.5vh;
+  text-align: left;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 20px 20px 20px 20px;
+  -webkit-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+  }
+  input[type=text]:focus {
+    width: 95%;
+    color: #000000;
+  }
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+ul li {
+  display:inline;
+}
+
+.active{
+  color: #5cb85c;
+  font-size: 2em;
+  font-family: 'BebasNeue', Fallback, sans-serif;
+  margin: 2em 2em 2em 2em;
+}
+
+.inactive{
+  color: #000000;
+  font-size: 2em;
+  font-family: 'BebasNeue', Fallback, sans-serif;
+  margin: 2em 2em 2em 2em;
+}
