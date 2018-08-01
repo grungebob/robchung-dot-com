@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       data: data,
-      view: 'shelf1'
+      view: 'applications'
     }
   }
 
@@ -31,9 +31,11 @@ class App extends Component {
           Full-Stack Software Engineering Dude from Pittsburgh<br/>
           I love Web Development, Social Innovation, and Tacos<br/>
         </p>
-        <ul>
-          <li className={this.state.view === 'shelf1' ? 'active' : 'inactive'} onClick={() => this.changeView('shelf1')}> Applications </li> 
-          <li className={this.state.view === 'shelf2' ? 'active' : 'inactive'} onClick={() => this.changeView('shelf2')}> Media </li>
+        <ul className = "content">
+          <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
+          <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media </li>
+          <li className = 'inactive' > Dreams </li>                     
+          <li className = 'inactive' > Marketing </li>           
           <li className = 'inactive' > Resume </li> 
 
         </ul>

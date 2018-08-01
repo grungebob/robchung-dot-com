@@ -66,13 +66,11 @@ class Shoe extends React.Component {
             !this.state.showModal ?
                 this.state.shoe !== 'Empty Slot' ?
                     <td className = "container" onClick={this.openModal} id="myBtn">
-                        <img src={this.state.shoe.imgLink} alt="Shoe" className="shoe"/>
+                        <img src={this.state.shoe.image} alt="Shoe" className="shoe"/>
                         <div className = "overlay">
                             <div className = "shoe-info">  
-                                Brand: { this.state.shoe.brand } <br />
-                                Style: { this.state.shoe.style } <br />
-                                Size: { this.state.shoe.size } <br />
-                                UPC: { this.state.shoe.UPC } <br />
+                                 {/* Name: */}
+                                { this.state.shoe.name } <br />
                             </div>
                         </div>     
                     </td>
@@ -89,14 +87,13 @@ class Shoe extends React.Component {
                     <span className="close" onClick={this.closeModal}>&times;</span>
                     <div className = "modal-content">
                         <img alt="Shoe" src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
-                        Brand: { this.state.shoe.brand } <br />
-                        Style: { this.state.shoe.style } <br />
-                        Size: { this.state.shoe.size } <br />
-                        UPC: { this.state.shoe.UPC } <br />
-                        Image Link: { this.state.shoe.imgLink } 
+                        {/* Name: */}
+                        { this.state.shoe.name } <br />
+                        Stack: { this.state.shoe.stack } <br />
+                        <br />
                     </div>
-                    <div onClick={this.edit} className="shoe-button" >EDIT</div>
-                    <div onClick={this.deleteShoe} className="shoe-button remove" >REMOVE</div>
+                    <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
+                    <a href={ this.state.shoe.github } className="shoe-button remove" >GitHub</a>
                 </Modal>
             :
             <Modal

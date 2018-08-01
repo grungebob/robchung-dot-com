@@ -8,22 +8,31 @@
 }
 
 .App-header {
+  overflow: hidden;
+  position: fixed;
   background-color: #222;
-  margin: auto auto;
-  height: 35vh;
+  top: 0;
+  width: 100%;
+  height: 10vh;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 4em;
+  font-size: 2em;
   text-align: center;
 }
 
 .App-intro {
-  font-size: large;
+  position: fixed;
+  width: 100%;
+  top: 11vh;
+  background: #222;
+  height: 12vh;
+  padding-top: 1vh;
   font-size: 2em;
   font-family: 'BebasNeue', Fallback, sans-serif;
+  color: #ffffff;
 }
 
 /* ==== Top Sign Start===== */
@@ -31,7 +40,7 @@
 @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
 h1 {
   /* Base font size */
-  font-size: 20vh;
+  font-size: 3vh;
   text-align: center;
   margin: auto auto;
   /* Set neon color */
@@ -41,12 +50,11 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: .8vh;
-  font-size: 2.5rem;
+  min-height: .4vh;
   font-weight: 200;
   font-style: italic;
   color: rgb(255, 225, 225);
-  padding: 1.5rem 2rem 1.5rem 2rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
   border: 0.4rem solid rgb(223, 250, 255);
   border-radius: 3rem;
   animation: flicker 20s infinite alternate;
@@ -122,6 +130,14 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
   font-weight: 200;
 }
 
+/* App Content */
+
+.content {
+  bottom: 0;
+  margin-top: 24vh;
+  padding-top: 10vh;
+}
+
 .shoe {
   width: 100%;
   height: auto;
@@ -129,7 +145,7 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 }
 
 table, th, td {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-collapse: collapse;
   table-layout: fixed;
   word-wrap:break-word
@@ -137,13 +153,12 @@ table, th, td {
 th, td {
     padding: 5px;
     text-align: center;
-    height: 65px;
     white-space: pre;
     word-wrap: break-word;
 }
 
 table#table1 {
-  width:90%; 
+  width:60%; 
   margin-left: auto; 
   margin-right: auto;
 }
@@ -163,7 +178,7 @@ table#table1 {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #509e2f;
+  background-color: #08f;
 }
 
 .container:hover .overlay {
@@ -195,7 +210,7 @@ table#table1 {
   height:30px;
   width: 75px;
   color: #ffffff;
-  background-color:#509e2f;
+  background-color:#08f;
   padding:10px 15px
  }
 
@@ -223,7 +238,7 @@ Background */
 input[type=text] {
   border-radius: 10px;  
   width: 60%;
-  color: #5cb85c;
+  color: #08f;
   box-sizing: border-box;
   border: 2px solid #ccc;
   font-size: 2.5vh;
@@ -267,7 +282,7 @@ input[type=text] {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #08f;
   color: white;
 }
 
@@ -275,7 +290,7 @@ input[type=text] {
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #08f;
   color: white;
 }
 
@@ -284,7 +299,7 @@ ul li {
 }
 
 .active{
-  color: #5cb85c;
+  color: #08f;
   font-size: 2em;
   font-family: 'BebasNeue', Fallback, sans-serif;
   margin: 2em 2em 2em 2em;
