@@ -29,7 +29,7 @@ class App extends Component {
         </header>
         <p className="App-intro">
           Full-Stack Software Engineering Dude from Pittsburgh<br/>
-          I love Web Development, Social Innovation, and Tacos.<br/>
+          I love Web Development, Social Innovation, and Tacos<br/>
         </p>
         <ul>
           <li className={this.state.view === 'shelf1' ? 'active' : 'inactive'} onClick={() => this.changeView('shelf1')}> Applications </li> 
