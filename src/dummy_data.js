@@ -1,19 +1,19 @@
-import socialnights from './assets/socialnights.png'
+import socialnightsimage from './assets/socialnights.png'
 
 var data = {};
 
-data.default = [
+data.home = [
     { 
-        row: 'Top',
+        row: 'Home',
         shoes: 
         [
             {
-            id: 21,
-            name: 'Spot Nite',
+            id: "Spot Nite",
+            name: 'Full-Stack Software Engineering Dude from Pittsburgh<br/> I love Web Development, Social Innovation, and Tacos <br/>',
             stack: "Vue, Redis, Socket.io, Passport, MongoDB, SpotifyAPI",
-            link: 'https://stockx.imgix.net/New-Balance-574-Sport-Ronnie-Fieg-X-DSM-Navy.png',
+            link: 'https://github.com/grungebob/Spot-Nite',
             github: 'https://github.com/grungebob/Spot-Nite',
-            image: socialnights
+            
             },
         ]}, 
     { 
@@ -44,7 +44,7 @@ data.applications = [
             stack: "Vue, Redis, Socket.io, Passport, MongoDB, SpotifyAPI",
             link: 'https://stockx.imgix.net/New-Balance-574-Sport-Ronnie-Fieg-X-DSM-Navy.png',
             github: 'https://github.com/grungebob/Spot-Nite',
-            image: socialnights
+            image: socialnightsimage
             },
         ]}, 
     { 

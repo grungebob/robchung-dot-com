@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       data: data,
-      view: 'applications'
+      view: 'home'
     }
   }
 
@@ -23,23 +23,30 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header"> 
-        <h1 className="App-title">ROBERT CHUNG</h1>
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          {/* <h1 className="App-title" >Robert Chung</h1> */}
-        </header>
-        <p className="App-intro">
+          <h1 className="App-title">ROBERT CHUNG</h1>
+        </header>   
+        {/* <p className="App-intro">
           Full-Stack Software Engineering Dude from Pittsburgh<br/>
           I love Web Development, Social Innovation, and Tacos<br/>
-        </p>
+        </p> */}
         <ul className = "content">
+          <li className={this.state.view === 'home' ? 'active' : 'inactive'} onClick={() => this.changeView('home')}> Home </li> 
           <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
           <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media </li>
           <li className = 'inactive' > Dreams </li>                     
           <li className = 'inactive' > Marketing </li>           
           <li className = 'inactive' > Resume </li> 
-
         </ul>
-        <Shelf shelf={this.state.data[this.state.view]} handleClick={this.handleClick}/>
+          {
+            this.state.view === 'home' ?
+            <p className="new-intro">
+              Full-Stack Software Engineer from Pittsburgh<br/>
+              I love Web Development, Social Innovation, and Tacos<br/>
+            </p>
+            :
+            <Shelf shelf={this.state.data[this.state.view]}/>
+            
+          }
       </div>
     );
   };
