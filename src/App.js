@@ -24,20 +24,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header"> 
-          <h1 className="App-title">ROBERT CHUNG</h1>
+          <h1 className="App-title" onClick={() => this.changeView('home')}>ROBERT CHUNG</h1>
         </header>   
         {/* <p className="App-intro">
           Full-Stack Software Engineering Dude from Pittsburgh<br/>
           I love Web Development, Social Innovation, and Tacos<br/>
         </p> */}
-        <Menu>
-          <a id="home" className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
-          <a id="contact" className="menu-item" href="/contact">Contact</a>
-          <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-        </Menu>
         <ul className = "content">
-          <li className={this.state.view === 'home' ? 'active' : 'inactive'} onClick={() => this.changeView('home')}> Home </li> 
           <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
           <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media </li>
           <li className = 'inactive' > Dreams </li>                     
