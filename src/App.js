@@ -29,8 +29,8 @@ class App extends Component {
           <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
           <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media </li>
           <li className = 'inactive' > Dreams </li>                     
-          <li className = 'inactive' > Marketing </li>           
           <li className = 'inactive' > Resume </li> 
+          <li className = 'inactive' > Contact </li>           
         </ul>
           {
             this.state.view === 'home' ?
@@ -39,7 +39,12 @@ class App extends Component {
               I love Web Development, Social Innovation, and Tacos<br/>
             </p>
             :
-            <Shelf shelf={this.state.data[this.state.view]}/>
+            <p className="new-intro">
+              Full-Stack Software Engineer from Pittsburgh<br/>
+              I love Web Development, Social Innovation, and Tacos<br/>
+              <Shelf shelf={this.state.data[this.state.view]}/>
+            </p>
+            
           }
       </div>
     );
