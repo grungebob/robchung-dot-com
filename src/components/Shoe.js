@@ -89,7 +89,9 @@ class Shoe extends React.Component {
                         <img alt="Shoe" src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
                         {/* Name: */}
                         { this.state.shoe.name } <br />
+                        {this.state.shoe.description} <br />
                         Stack: { this.state.shoe.stack } <br />
+                        Teammates: {this.state.shoe.teammates} <br />
                         <br />
                     </div>
                     <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>

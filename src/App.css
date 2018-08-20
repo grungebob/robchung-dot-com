@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: #222;
-  height: 100vh;
+  height: 200vh;
 }
 
 .App-logo {
@@ -148,7 +148,6 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 /* App Content */
 
 .content {
-  bottom: 0;
   margin-top: 18vh;
   padding-top: 10vh;
   background: #222;
@@ -165,7 +164,7 @@ table, th, td {
   /* border: 1px solid black; */
   border-collapse: collapse;
   table-layout: fixed;
-  word-wrap:break-word
+  word-wrap:break-word;
 }
 th, td {
     padding: 5px;
