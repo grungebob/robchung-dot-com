@@ -15,8 +15,8 @@
   background-color: #222;
   top: 0;
   width: 100%;
-  height: 12vh;
-  padding: 30px;
+  height: 18vh;
+  padding: 5vh;
   color: white;
 }
 
@@ -28,10 +28,11 @@
 .App-intro {
   position: fixed;
   width: 100%;
-  top: 11vh;
+  top: 15vh;
   background: #222;
-  height: 12vh;
+  height: 10vh;
   padding-top: 1vh;
+  padding-bottom: 1vh;
   font-size: 2em;
   font-family: 'BebasNeue', Fallback, sans-serif;
   color: #ffffff;
@@ -149,7 +150,7 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 .content {
   bottom: 0;
   margin-top: 18vh;
-  padding-top: 5vh;
+  padding-top: 10vh;
   background: #222;
   color: #ffffff;
 }

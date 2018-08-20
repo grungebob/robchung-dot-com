@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Shelf from './components/Shelf.js';
 import data from './dummy_data.js';
-import { slide as Menu } from 'react-burger-menu';
 
 class App extends Component {
   constructor(props) {
@@ -26,10 +25,6 @@ class App extends Component {
         <header className="App-header"> 
           <h1 className="App-title" onClick={() => this.changeView('home')}>ROBERT CHUNG</h1>
         </header>   
-        {/* <p className="App-intro">
-          Full-Stack Software Engineering Dude from Pittsburgh<br/>
-          I love Web Development, Social Innovation, and Tacos<br/>
-        </p> */}
         <ul className = "content">
           <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
           <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media </li>
@@ -45,7 +40,6 @@ class App extends Component {
             </p>
             :
             <Shelf shelf={this.state.data[this.state.view]}/>
-            
           }
       </div>
     );
