@@ -93,8 +93,7 @@ class Shoe extends React.Component {
                         Team: {this.state.shoe.teammates} <br />
                         <br />
                     </div>
-                    <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
-                    <a href={ this.state.shoe.github } className="shoe-button remove" >GitHub</a>
+                    <a href={ this.state.shoe.link } className="shoe-button" >{this.state.shoe.linkText}</a>
                 </Modal>
             :
             !this.state.isEditing && !this.state.shoe.team && this.state.shoe.type === 'Dreams' ?
@@ -125,7 +124,7 @@ class Shoe extends React.Component {
                         { this.state.shoe.name } <br />
                         {this.state.shoe.description} <br />
                         Stack: { this.state.shoe.stack } <br />
-                        Team: {this.state.shoe.teammates} <br />
+                        Teammates: {this.state.shoe.teammates} <br />
                         <br />
                     </div>
                     <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>

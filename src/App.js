@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Shelf from './components/Shelf.js';
 import data from './data.js';
+import gitImg from './assets/github.svg';
+import linkImg from './assets/linkedin.svg';
+import emailImg from './assets/email.svg';
 
 class App extends Component {
   constructor(props) {
@@ -60,9 +63,9 @@ class App extends Component {
             :
             this.state.view === 'contact' ?
             <p className="new-intro">
-              <a href="mailto:chungrob@gmail.com">Email</a><br />
-              <a href="https://github.com/grungebob">GitHub</a> <br />
-              <a href="https://linkedin.com/in/robert-chung">LinkedIn</a>
+              <a href="mailto:chungrob@gmail.com"><img src = {emailImg} alt="Email" width="100" fill = "white"/></a><br />
+              <a href="https://github.com/grungebob"> <img src = {gitImg} alt="GitHub" width="100" height="100" /></a> <br />
+              <a href="https://linkedin.com/in/robert-chung"><img src = {linkImg} alt="Linkedin" width="100" height="100" /></a>
             </p>
             :
             <p className="new-intro">

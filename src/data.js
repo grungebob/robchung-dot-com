@@ -2,6 +2,10 @@ import socialnightsimage from './assets/socialnights.png';
 import sweetSpotImage from './assets/sweetspot.png';
 import sneakatory from './assets/sneakatory.png';
 import elliot from './assets/sidostw.png';
+import cyb from './assets/cyb.png';
+import kVid from './assets/kornerVideo.png';
+import alma from './assets/alma.png';
+import kornerIG from './assets/kornerIG.png';
 
 
 var data = {};
@@ -133,8 +137,10 @@ data.applications = [
                     team: true,
                     teammates: 'Steve Hollis, Jordan Serra, Nicholas Hewitt',
                     stack: 'Adobe Premiere, After Effects, Illustrator, Red Dragon, Celtx',
-                    image: 'https://stockx.imgix.net/Air-Jordan-1-Retro-High-Think-16-Pass-The-Torch-Product.jpg',
-                    imgLink: 'https://stockx.imgix.net/Air-Jordan-1-Retro-High-Think-16-Pass-The-Torch-Product.jpg'
+                    image: kVid,
+                    imgLink: kVid,
+                    link: 'https://www.youtube.com/watch?v=JfN7ni0RL14',
+                    linkText: 'Watch the Commercial'
                     },
     
                 ]}, 
@@ -145,12 +151,14 @@ data.applications = [
                     id: 36,
                     name: 'Alma Mater Records',
                     type: 'Marketing',
-                    description: ['Managed social media for record label, creating promotional campaigns for artist releases and garnering tens of thousands of views.', 'featured across various publications including Complex.'],
+                    description: ['Managed social media for record label, creating promotional campaigns for artist releases', 'garnering tens of thousands of views.', 'featured across various publications including Complex.'],
                     team: true,
                     teammates: 'Sam Zornow aka DJ Shiftee',
                     stack: 'Adobe Premiere, Photoshop, Illustrator, Hootsuite',
-                    image: 'https://stockx.imgix.net/Air-Jordan-1-Retro-High-Think-16-Pass-The-Torch-Product.jpg',
-                    imgLink: 'https://stockx.imgix.net/New-Balance-574-Sport-Ronnie-Fieg-X-DSM-Navy.png'
+                    image: alma,
+                    imgLink: alma,
+                    link: 'http://almamaterrecs.com/',
+                    linkText: 'Visit AMR',
                     },
     
                 ]},
@@ -165,11 +173,31 @@ data.applications = [
                         team: true,
                         teammates: 'Steve Hollis',
                         stack: 'Hootsuite, Indiegogo Analytics, Facebook Business Manager',
-                        image: 'https://stockx.imgix.net/Air-Jordan-1-Retro-High-Think-16-Pass-The-Torch-Product.jpg',
-                        imgLink: 'https://stockx.imgix.net/New-Balance-574-Sport-Ronnie-Fieg-X-DSM-Navy.png'
+                        image: kornerIG,
+                        imgLink: kornerIG,
+                        link: 'igg.me/at/korner',
+                        linkText: "See the Campaign"
                         },
         
                     ]}, 
+                    { 
+                        row: 2,
+                        shoes: [
+                            {
+                            id: 36,
+                            name: 'City Year: Blog',
+                            type: 'Marketing',
+                            description: ['"The Volunteer Experience with City Year Boston"', 'Writer for official City Year Blog',  'Filmed and edited video'],
+                            team: true,
+                            teammates: 'Kylie Pratt',
+                            stack: 'GoPro, Pen, Paper, WordPress',
+                            image: cyb,
+                            imgLink: cyb,
+                            link: 'https://www.cityyear.org/boston/blog/volunteer-experience-city-year-boston',
+                            linkText: 'Read The post'
+                            },
+            
+                        ]},
             ];
 
 export default data;
