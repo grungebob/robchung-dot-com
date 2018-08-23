@@ -66,7 +66,7 @@ class Shoe extends React.Component {
             !this.state.showModal ?
                 this.state.shoe !== 'Empty Slot' ?
                     <td className = "container" onClick={this.openModal} id="myBtn">
-                        <img src={this.state.shoe.image} alt="Shoe" className="shoe"/>
+                        <img src={this.state.shoe.image} alt="Application" className="shoe"/>
                         <div className = "overlay">
                             <div className = "shoe-info">  
                                  {/* Name: */}
@@ -77,7 +77,7 @@ class Shoe extends React.Component {
                 :
                 <td onClick ={this.edit} > Open Slot </td>
             :
-            !this.state.isEditing ?
+            !this.state.isEditing && this.state.shoe.team && this.state.shoe.type === 'Marketing' ?
                 <Modal
                 isOpen={this.state.showModal}
                 onRequestClose={this.closeModal}
@@ -87,11 +87,45 @@ class Shoe extends React.Component {
                     <span className="close" onClick={this.closeModal}>&times;</span>
                     <div className = "modal-content">
                         <img alt="Shoe" src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
-                        {/* Name: */}
+                        { this.state.shoe.name } <br />
+                        {this.state.shoe.description.map((bulletpoint) => <div> {bulletpoint} <br /> </div> )}
+                        Stack: { this.state.shoe.stack } <br />
+                        Team: {this.state.shoe.teammates} <br />
+                        <br />
+                    </div>
+                    <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
+                    <a href={ this.state.shoe.github } className="shoe-button remove" >GitHub</a>
+                </Modal>
+            :
+            !this.state.isEditing && !this.state.shoe.team && this.state.shoe.type === 'Dreams' ?
+                <Modal
+                isOpen={this.state.showModal}
+                onRequestClose={this.closeModal}
+                style={customStyles}
+                ariaHideApp={false}
+                >
+                    <span className="close" onClick={this.closeModal}>&times;</span>
+                    <div className = "modal-content">
+                        <img alt={this.state.shoe.name} src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
+                        {this.state.shoe.description.map((bulletpoint) => <div> {bulletpoint} <br /> </div> )}
+                        <br />
+                    </div>
+                </Modal>
+            :
+            !this.state.isEditing && this.state.shoe.team ?
+                <Modal
+                isOpen={this.state.showModal}
+                onRequestClose={this.closeModal}
+                style={customStyles}
+                ariaHideApp={false}
+                >
+                    <span className="close" onClick={this.closeModal}>&times;</span>
+                    <div className = "modal-content">
+                        <img alt="Shoe" src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
                         { this.state.shoe.name } <br />
                         {this.state.shoe.description} <br />
                         Stack: { this.state.shoe.stack } <br />
-                        Teammates: {this.state.shoe.teammates} <br />
+                        Team: {this.state.shoe.teammates} <br />
                         <br />
                     </div>
                     <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
@@ -103,19 +137,18 @@ class Shoe extends React.Component {
                 onRequestClose={this.closeModal}
                 style={customStyles}
                 ariaHideApp={false}
-                align-content="center"
                 >
                     <span className="close" onClick={this.closeModal}>&times;</span>
-                    <form className = "modal-edit">
-                        <input type="text" name="brand" onChange={this.handleChange} placeholder="Brand (e.g. adidas, Nike, etc.)" />
-                        <input type="text" name="style" onChange={this.handleChange} placeholder="Style (e.g. AR5131-610)" />
-                        <input type="text" name="size"  onChange={this.handleChange} placeholder="Size (e.g. 7, 10, ... you get it)" />
-                        <input type="text" name="UPC"  onChange={this.handleChange} placeholder="UPC #" />
-                        <input type="text" name="imgLink"  onChange={this.handleChange} placeholder="Image URL (e.g. https://stockx.imgix.net/shoe-name.png)" /> <br />
-                        <div type="submit" value="Submit" className="shoe-button" onClick= {this.updateShoe}>SAVE</div>
-                        <div onClick={this.deleteShoe} className="shoe-button remove">REMOVE</div>
-                    </form>
-            </Modal>
+                    <div className = "modal-content">
+                        <img alt="Shoe" src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
+                        { this.state.shoe.name } <br />
+                        {this.state.shoe.description} <br />
+                        Stack: { this.state.shoe.stack } <br />
+                        <br />
+                    </div>
+                    <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
+                    <a href={ this.state.shoe.github } className="shoe-button remove" >GitHub</a>
+                </Modal>
         )
     }
 }
