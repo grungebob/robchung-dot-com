@@ -45,7 +45,7 @@ class App extends Component {
             <p className="new-intro">
               Full-Stack Software Engineer from Pittsburgh<br/>
               I love Web Development, Social Innovation, and Tacos<br/>
-              Strengths: Node, Vue, React, Express, Angular, SQL
+              Strengths: Node, VueJS, React, Express, AngularJS, SQL, Redis, Sockets
               <Shelf shelf={this.state.data[this.state.view]}/>
             </p>
             :
@@ -63,9 +63,9 @@ class App extends Component {
             :
             this.state.view === 'contact' ?
             <p className="new-intro">
-              <a href="mailto:chungrob@gmail.com"><img src = {emailImg} alt="Email" width="100" fill = "white"/></a><br />
-              <a href="https://github.com/grungebob"> <img src = {gitImg} alt="GitHub" width="100" height="100" /></a> <br />
-              <a href="https://linkedin.com/in/robert-chung"><img src = {linkImg} alt="Linkedin" width="100" height="100" /></a>
+              <a href="mailto:chungrob@gmail.com"><img src = {emailImg} alt="Email" className="social-icons"/></a>
+              <a href="https://github.com/grungebob"><img src = {gitImg} alt="GitHub" className="social-icons"/></a>
+              <a href="https://linkedin.com/in/robert-chung"><img src = {linkImg} alt="Linkedin" className="social-icons"/></a>
             </p>
             :
             <p className="new-intro">

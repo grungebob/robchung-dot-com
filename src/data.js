@@ -1,4 +1,4 @@
-import socialnightsimage from './assets/socialnights.png';
+import socialnightsimage from './assets/socialNights3.png';
 import sweetSpotImage from './assets/sweetspot.png';
 import sneakatory from './assets/sneakatory.png';
 import elliot from './assets/sidostw.png';
@@ -6,6 +6,12 @@ import cyb from './assets/cyb.png';
 import kVid from './assets/kornerVideo.png';
 import alma from './assets/alma.png';
 import kornerIG from './assets/kornerIG.png';
+import seaLogo from './assets/seaLogo.png';
+import seaCover from './assets/seaCover.png';
+import cy from './assets/cityYear.jpg';
+import cy3 from './assets/cy3.png';
+import gsih from './assets/gsih.jpg';
+import gsihSpeech from './assets/gsihSpeech.png'
 
 
 var data = {};
@@ -104,21 +110,36 @@ data.applications = [
                 type: 'Dreams',
                 name: 'SEA Collaborative',
                 description: ["Education venture utilizing technology to connect at-risk students", "with tutors and mentors in safe, effective, and convenient methods.", "Proudly partnered with charter school KIPP Bridge in Oakland, CA."],
-                image: 'https://stockx.imgix.net/Air-Jordan-1-Retro-High-Think-16-Pass-The-Torch-Product.jpg',
-                imgLink: 'https://stockx.imgix.net/New-Balance-574-Sport-Ronnie-Fieg-X-DSM-Navy.png'
+                image: seaCover,
+                imgLink: seaLogo,
+                link: 'seacollab.com'
                 },
 
             ]}, 
             { 
-                row: 3,
+            row: 3,
+            shoes: [
+                {
+                id: 36,
+                type: 'Dreams',
+                name: 'Global Social Impact House 2014',
+                description: ["Selected for Inaugaral residential fellowship in social entrepreneurship", '"The Center for Social Impact Strategy gathered 24 of the most promising', 'social entrepreneurs from across the globe in Vieques, Puerto Rico."'],
+                image: gsih,
+                imgLink: gsihSpeech,
+                link: 'http://socialimpactstrategy.org/residential/gsih/'
+                },
+
+            ]}, 
+            { 
+                row: 2,
                 shoes: [
                     {
                     id: 36,
                     type: 'Dreams',
                     name: 'City Year',
                     description: ["Two AmeriCorps terms of service:", "San José / Silicon Valley at K.R. Smith Elementary, '08-'09", "Boston Civic Engagement, '14-'15"],
-                    image: 'https://stockx.imgix.net/Air-Jordan-1-Retro-High-Think-16-Pass-The-Torch-Product.jpg',
-                    imgLink: 'https://stockx.imgix.net/New-Balance-574-Sport-Ronnie-Fieg-X-DSM-Navy.png'
+                    image: cy3,
+                    imgLink: cy,
                     },
     
                 ]}, 

@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: #222;
-  height: 300vh;
+  height: 310vh;
 }
 
 .App-logo {
@@ -48,6 +48,13 @@
   font-size: 2em;
   font-family: 'BebasNeue', Fallback, sans-serif;
   color: #fff;
+}
+
+.social-icons{
+  width: 7vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  fill: #fff;
 }
 
 /* ==== Top Sign Start===== */
