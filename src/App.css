@@ -271,9 +271,6 @@ table#table1 {
 /* ==== The Modal: =====
 Background */
 
-.bring-front {
-  z-index: 2;
-}
 
 .modal-edit {
   position: relative;
