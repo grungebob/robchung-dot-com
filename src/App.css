@@ -59,7 +59,7 @@
 }
 
 .social-icons:hover{
-  fill: #08f;
+  fill: rgb(61, 165, 255);
   transition: 2s ease;
 }
 
