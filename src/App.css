@@ -160,10 +160,6 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 
 /* App Content */
 
-.shelf {
-  z-index: -1;
-}
-
 .content {
   margin-top: 18vh;
   padding-top: 10vh;
@@ -275,6 +271,10 @@ table#table1 {
 /* ==== The Modal: =====
 Background */
 
+.bring-front {
+  z-index: 2;
+}
+
 .modal-edit {
   position: relative;
   background-color: #fefefe;
@@ -285,7 +285,7 @@ Background */
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 input[type=text] {

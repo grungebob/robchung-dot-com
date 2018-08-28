@@ -155,15 +155,15 @@ export default Shoe;
 
 const customStyles = {
     content : {
-        fontSize: '4vh',
-        fontFamily: 'BebasNeue',
-        top: '50%',
+        fontSize: '3vh',
+        fontFamily: 'proxima-nova',
+        top: '60%',
         left: '50%',
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        width: '70%',
-        height: '70%',
+        width: '60%',
+        height: '60%',
       }
   };
