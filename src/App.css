@@ -15,9 +15,10 @@
   background-color: #222;
   top: 0;
   width: 100%;
-  height: 18vh;
-  padding: 5vh;
+  height: 15vh;
+  padding: 2vh;
   color: white;
+  z-index: 1;
 }
 
 .App-title {
@@ -160,7 +161,7 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 /* App Content */
 
 .shelf {
-  z-index: 100;
+  z-index: -1;
 }
 
 .content {
