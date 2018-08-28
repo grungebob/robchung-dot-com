@@ -75,7 +75,7 @@ data.applications = [
             {
             id: 16,
             name: 'Sneaktory',
-            description: "Inventory tracking system for Stock X",
+            description: "Inventory tracking system for StockX",
             stack: "React, React-Modal, Heroku",
             link: 'https://stockx-inventory.herokuapp.com/',
             github: 'https://github.com/grungebob/Sneakatory',

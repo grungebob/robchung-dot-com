@@ -57,6 +57,11 @@
   fill: #fff;
 }
 
+.social-icons:hover{
+  fill: #08f;
+  transition: 2s ease;
+}
+
 /* ==== Top Sign Start===== */
 
 @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
@@ -154,11 +159,35 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 
 /* App Content */
 
+.shelf {
+  z-index: 100;
+}
+
 .content {
   margin-top: 18vh;
   padding-top: 10vh;
   background: #222;
   color: #ffffff;
+}
+
+.active{
+  color: #08f;
+  font-size: 2em;
+  font-family: 'BebasNeue', Fallback, sans-serif;
+  margin: 2em 2em 2em 2em;
+}
+
+.inactive{
+  color: #fff;
+  font-size: 2em;
+  font-family: 'BebasNeue', Fallback, sans-serif;
+  margin: 2em 2em 2em 2em;
+}
+
+.inactive:hover {
+  color: #46a7fc;
+  transition: 1s ease;
+
 }
 
 .shoe {
@@ -228,7 +257,7 @@ table#table1 {
   border-radius:5px;
   border: none;
   font-size: 4vh;
-  font-family:BebasNeue;
+  font-family: BebasNeue;
   letter-spacing:2px;
   height:30px;
   width: 75px;
@@ -317,20 +346,12 @@ input[type=text] {
   color: white;
 }
 
+.modal-content {
+  font-family: 'proxima-nova', Fallback, sans-serif;
+  font-size: 3.25vh;
+}
+
 ul li {
   display:inline;
 }
 
-.active{
-  color: #08f;
-  font-size: 2em;
-  font-family: 'BebasNeue', Fallback, sans-serif;
-  margin: 2em 2em 2em 2em;
-}
-
-.inactive{
-  color: #fff;
-  font-size: 2em;
-  font-family: 'BebasNeue', Fallback, sans-serif;
-  margin: 2em 2em 2em 2em;
-}
