@@ -22,15 +22,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header"> 
-          <h1 className="App-title" onClick={() => this.changeView('home')}>ROBERT CHUNG</h1>
-        </header>   
-        <ul className = "content">
+           
+        <ul className = "options">
           <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
           <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media & Marketing</li>
           <li className = {this.state.view === 'dreams' ? 'active' : 'inactive'} onClick={() => this.changeView('dreams')} > Dreams </li>                     
           <li className = {this.state.view === 'contact' ? 'active' : 'inactive'} onClick={() => this.changeView('contact')} > Contact </li>           
         </ul>
+        <header className="App-header"> 
+          <h1 className="App-title" onClick={() => this.changeView('home')}>ROBERT CHUNG</h1>
+        </header>
           {
             this.state.view === 'home' ?
             <p className="new-intro">

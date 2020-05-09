@@ -11,9 +11,9 @@
 
 .App-header {
   overflow: hidden;
-  position: fixed;
+  position: relative;
   background-color: #222;
-  top: 0;
+  top: 5;
   width: 100%;
   height: 15vh;
   padding: 2vh;
@@ -27,7 +27,7 @@
 }
 
 .App-intro {
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 15vh;
   background: #222;
@@ -72,8 +72,8 @@ h1 {
   text-align: center;
   margin: auto auto;
   /* Set neon color */
-  --neon-text-color: #f40;
-  --neon-border-color: #08f;
+  --neon-text-color: rgb(177, 49, 2);
+  --neon-border-color: rgb(0, 99, 186);
   font-family: 'Neon80sRegular', 'Exo 2', sans-serif;
   display: flex;
   justify-content: center;
@@ -81,12 +81,13 @@ h1 {
   min-height: .4vh;
   font-weight: 200;
   font-style: italic;
-  color: rgb(255, 225, 225);
+  color: rgb(244, 190, 190);
   padding: 1rem 1.5rem 1rem 1.5rem;
-  border: 0.4rem solid rgb(223, 250, 255);
+  border: 0.4rem solid rgb(172, 233, 244);
   border-radius: 3rem;
-  animation: flicker 20s infinite alternate;
+  animation: flicker 10s infinite alternate;
   width: 30vw;
+  text-shadow: 0 0 3vw;
 }
 h1::-moz-selection {
   background-color: var(--neon-border-color);
@@ -103,23 +104,27 @@ h1:focus {
 @keyframes flicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         text-shadow:
-            -0.2rem -0.2rem 1rem rgb(255, 134, 134),
-            0.2rem 0.2rem 1rem rgb(255, 134, 134),
-            0 0 2rem var(--neon-text-color),
-            0 0 4rem var(--neon-text-color),
-            0 0 6rem var(--neon-text-color),
-            0 0 8rem var(--neon-text-color),
-            0 0 10rem var(--neon-text-color);
+            .25rem .25rem 1vw rgb(255, 134, 134),
+            .25rem .25rem 3vw rgb(255, 134, 134),
+            .25rem .25rem 11vw var(--neon-text-color),
+            .25rem .25rem 11.5vw var(--neon-text-color),
+            .25rem .25rem .4vw var(--neon-text-color),
+            .25rem .25rem .5vw var(--neon-text-color),
+            .25rem .25rem .1vw var(--neon-text-color);
         box-shadow:
-            0 0 .5rem rgb(129, 205, 255),
-            inset 0 0 .5rem rgb(129, 205, 255),
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color),
-            0 0 4rem var(--neon-border-color),
-            inset 0 0 4rem var(--neon-border-color);
+            .25rem .25rem .5rem rgb(129, 205, 255),
+            inset .25rem .25rem .5rem rgb(129, 205, 255),
+            .25rem .25rem 2rem var(--neon-border-color),
+            inset .25rem .25rem 2rem var(--neon-border-color),
+            .25rem .25rem 4rem var(--neon-border-color),
+            inset .25rem .25rem 4rem var(--neon-border-color);
     }
     20%, 24%, 55% {
-        text-shadow: none;
+        text-shadow: 
+          0 0 1vw var(--neon-text-color),
+          0 0 3vw var(--neon-text-color), 
+          0 0 10vw var(--neon-text-color), 
+          0 0 10vw var(--neon-text-color), 0 0 .4vw var(--neon-text-color), .5vw .5vw .1vw var(--neon-text-color);
         box-shadow: none;
     }
 }
@@ -160,9 +165,9 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 
 /* App Content */
 
-.content {
-  margin-top: 18vh;
-  padding-top: 10vh;
+.options {
+  margin-bottom: 3vh;
+  padding-top: 1vh;
   background: #222;
   color: #ffffff;
 }
