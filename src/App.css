@@ -194,6 +194,8 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 
 .options {
   margin-bottom: 3vh;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 1vh;
   background: #222;
   color: #ffffff;
