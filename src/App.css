@@ -1,8 +1,27 @@
 .App {
   text-align: center;
   background-color: #222;
-  height: 310vh;
   width: 100%;
+}
+
+.home {
+  height: 100vh;
+}
+
+.applications {
+  height: 240vh;
+}
+
+.marketing {
+  height: 305vh;
+}
+
+.dreams {
+  height: 300vh;
+}
+
+.contact {
+  height: 100vh;
 }
 
 .App-logo {

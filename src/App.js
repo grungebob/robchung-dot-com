@@ -21,7 +21,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={`App ${this.state.view === 'media' ? 'marketing' : this.state.view}`}>
         <nav class="navbar navbar-light navbar-expand-lg options">
           <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"
           aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,14 +42,14 @@ class App extends Component {
           {
             this.state.view === 'home' ?
             <p className="new-intro">
-              Full-Stack Software Engineer from Pittsburgh<br/>
-              I love Web Development, Social Innovation, and Tacos<br/>
+              Full-Stack Software Engineer at StockX from Pittsburgh <br/>
+              I love Web Development, Design Thinking, and Social Innovation<br/>
             </p>
             :
             this.state.view === 'applications' ?
             <p className="new-intro">
-              Full-Stack Software Engineer from Pittsburgh<br/>
-              I love Web Development, Social Innovation, and Tacos<br/>
+              Full-Stack Software Engineer at StockX from Pittsburgh<br/>
+              I love Web Development, Design Thinking, and Social Innovation<br/>
               Strengths: Node, VueJS, React, Express, AngularJS, SQL, Redis, Sockets
               <Shelf shelf={this.state.data[this.state.view]} />
             </p>
