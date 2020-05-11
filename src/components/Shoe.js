@@ -87,10 +87,10 @@ class Shoe extends React.Component {
                     <span className="close" onClick={this.closeModal}>&times;</span>
                     <div className = "modal-content">
                         <img alt="Shoe" src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
-                        { this.state.shoe.name } <br />
+                        <span className="section-title"> { this.state.shoe.name } </span><br />
                         {this.state.shoe.description.map((bulletpoint) => <div> {bulletpoint} <br /> </div> )}
-                        Stack: { this.state.shoe.stack } <br />
-                        Team: {this.state.shoe.teammates} <br />
+                        <span className="section-title">Stack</span> { this.state.shoe.stack } <br />
+                        <span className="section-title">Team</span> {this.state.shoe.teammates} <br />
                         <br />
                     </div>
                     <a href={ this.state.shoe.link } className="shoe-button" >{this.state.shoe.linkText}</a>
@@ -121,14 +121,20 @@ class Shoe extends React.Component {
                     <span className="close" onClick={this.closeModal}>&times;</span>
                     <div className = "modal-content">
                         <img alt="Shoe" src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
-                        { this.state.shoe.name } <br />
+                        <span className="section-title">{ this.state.shoe.name }</span> <br />
                         {this.state.shoe.description} <br />
-                        Stack: { this.state.shoe.stack } <br />
+                        <span className="section-title">Stack</span> { this.state.shoe.stack } <br />
                         Teammates: {this.state.shoe.teammates} <br />
                         <br />
                     </div>
-                    <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
-                    <a href={ this.state.shoe.github } className="shoe-button remove" >GitHub</a>
+                    {this.state.shoe.open ? 
+                        <div>
+                            <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
+                            <a href={ this.state.shoe.github } className="shoe-button remove" >GitHub</a>
+                        </div>
+                            : ''
+                    }
+                    
                 </Modal>
             :
             <Modal
@@ -140,13 +146,18 @@ class Shoe extends React.Component {
                     <span className="close" onClick={this.closeModal}>&times;</span>
                     <div className = "modal-content">
                         <img alt="Shoe" src = { this.state.shoe.imgLink } style={{maxWidth: "300px"}}/> <br />
-                        { this.state.shoe.name } <br />
+                        <span className="section-title">{ this.state.shoe.name }</span> <br />
                         {this.state.shoe.description} <br />
-                        Stack: { this.state.shoe.stack } <br />
+                        <span className="section-title">Stack</span> { this.state.shoe.stack } <br />
                         <br />
                     </div>
-                    <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
-                    <a href={ this.state.shoe.github } className="shoe-button remove" >GitHub</a>
+                    {this.state.shoe.open ? 
+                        <div>
+                            <a href={ this.state.shoe.link } className="shoe-button" >Visit Site</a>
+                            <a href={ this.state.shoe.github } className="shoe-button remove" >GitHub</a>
+                        </div>
+                            : ''
+                    }
                 </Modal>
         )
     }
@@ -155,14 +166,15 @@ export default Shoe;
 
 const customStyles = {
     content : {
-        fontSize: '3vh',
+        fontSize: '1.5vh',
         fontFamily: 'proxima-nova',
         top: '60%',
         left: '50%',
         right: '50%',
         bottom: 'auto',
         transform: 'translate(-50%, -50%)',
-        width: '60%',
-        height: '60%',
+        width: '50%',
+        height: '50%',
+        'z-index': '2',
       }
   };

@@ -9,7 +9,8 @@ class App extends Component {
     super(props);
     this.state = {
       data: data,
-      view: 'home'
+      view: 'home',
+      open: false,
     }
   }
 
@@ -19,23 +20,43 @@ class App extends Component {
     });
   }
 
+  changeNav() {
+    this.setState({
+      open: !this.state.open
+    })
+  }
+
   render() {
     return (
       <div className={`App ${this.state.view === 'media' ? 'marketing' : this.state.view}`}>
-        <nav class="navbar navbar-light navbar-expand-lg options">
-          <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"
-          aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
-          <div class="animated-icon3"><span></span><span></span><span></span></div>
+
+        <nav className="navbar navbar-light navbar-expand-lg options">
+          <button className={`navbar-toggler third-button`} type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"
+          aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation" onClick={()=> this.changeNav()}>
+          <div className={`animated-icon3 ${this.state.open ? 'open' : ''}`}><span></span><span></span><span></span></div>
         </button>
-            <div class="navbar-collapse collapse" id="collapsingNavbarSm">
-            <ul className = "options">
-              <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
-              <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media & Marketing</li>
-              <li className = {this.state.view === 'dreams' ? 'active' : 'inactive'} onClick={() => this.changeView('dreams')} > Dreams </li>                     
-              <li className = {this.state.view === 'contact' ? 'active' : 'inactive'} onClick={() => this.changeView('contact')} > Contact </li>           
-            </ul>
-          </div>
+              {this.state.open ?
+              <div class="navbar-collapse" id="navbarSupportedContent23">
+              <ul class="navbar-nav mr-auto">
+                <li className={`mobile ${this.state.view === 'home' ? 'active' : 'inactive'}`} onClick={() => this.changeView('home')}> Home </li> 
+                  <li className={`mobile ${this.state.view === 'applications' ? 'active' : 'inactive'}`} onClick={() => this.changeView('applications')}> Applications </li> 
+                  <li className={`mobile ${this.state.view === 'media' ? 'active' : 'inactive'}`} onClick={() => this.changeView('media')}> Media & Marketing</li>
+                  <li className = {`mobile ${this.state.view === 'dreams' ? 'active' : 'inactive'}`} onClick={() => this.changeView('dreams')} > Dreams </li>                     
+                  <li className = {`${this.state.view === 'contact' ? 'active' : 'inactive'}`} onClick={() => this.changeView('contact')} > Contact </li>         
+              </ul>
+            </div> : ''
+            }
+            <div className="navbar-collapse collapse" id="navbarSupportedContent22">
+              <ul className = "options">
+                <li className={this.state.view === 'home' ? 'active' : 'inactive'} onClick={() => this.changeView('home')}> Home </li> 
+                <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
+                <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media & Marketing</li>
+                <li className = {this.state.view === 'dreams' ? 'active' : 'inactive'} onClick={() => this.changeView('dreams')} > Dreams </li>                     
+                <li className = {this.state.view === 'contact' ? 'active' : 'inactive'} onClick={() => this.changeView('contact')} > Contact </li>           
+              </ul>
+            </div>
         </nav>
+
         <header className="App-header"> 
           <h1 className="App-title" onClick={() => this.changeView('home')}>ROBERT CHUNG</h1>
         </header>
@@ -50,7 +71,7 @@ class App extends Component {
             <p className="new-intro">
               Full-Stack Software Engineer at StockX from Pittsburgh<br/>
               I love Web Development, Design Thinking, and Social Innovation<br/>
-              Strengths: Node, VueJS, React, Express, AngularJS, SQL, Redis, Sockets
+              Strengths: Node, React, Redux, Express, Koa, SQL, Redis, Sockets
               <Shelf shelf={this.state.data[this.state.view]} />
             </p>
             :

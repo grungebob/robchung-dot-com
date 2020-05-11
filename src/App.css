@@ -38,7 +38,6 @@
   height: 25vh;
   padding: 2vh;
   color: white;
-  z-index: 1;
 }
 
 .App-title {
@@ -82,6 +81,11 @@
 .social-icons:hover{
   fill: rgb(61, 165, 255);
   transition: 2s ease;
+}
+
+.section-title {
+  font-family: 'NYC Sans Bold';
+
 }
 
 /* ==== Top Sign Start===== */
@@ -190,6 +194,8 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 
 .options {
   margin-bottom: 3vh;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 1vh;
   background: #222;
   color: #ffffff;
@@ -207,6 +213,11 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
   font-size: 1.75em;
   font-family: 'BebasNeue', Fallback, sans-serif;
   margin: 2em 2em 2em 2em;
+}
+
+.mobile {
+  padding-top: -2vh;
+  margin-bottom: -2vh;
 }
 
 .inactive:hover {
@@ -277,11 +288,12 @@ table#table1 {
 
 .shoe-button {
   padding:15px 16px 15px 16px;
-  margin:0;
+  margin-top:3vh;
+  margin-left: 1vh;
   text-align: center;
   border-radius:5px;
   border: none;
-  font-size: 4vh;
+  font-size: 2vh;
   font-family: BebasNeue;
   letter-spacing:2px;
   height:30px;
@@ -304,7 +316,6 @@ Background */
   position: relative;
   background-color: #fefefe;
   padding: 0;
-  border: 1px solid #888;
   width: 95%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
@@ -317,8 +328,6 @@ input[type=text] {
   border-radius: 10px;  
   width: 60%;
   color: #08f;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
   font-size: 2.5vh;
   text-align: left;
   background-position: 10px 10px; 
@@ -374,7 +383,9 @@ input[type=text] {
 
 .modal-content {
   font-family: 'proxima-nova', Fallback, sans-serif;
-  font-size: 3.25vh;
+  font-size: 1.5vh;
+  border: 0px;
+  z-index: 2;
 }
 
 ul li {

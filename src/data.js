@@ -11,7 +11,9 @@ import seaCover from './assets/seaCover.png';
 import cy from './assets/cityYear.jpg';
 import cy3 from './assets/cy3.png';
 import gsih from './assets/gsih.jpg';
-import gsihSpeech from './assets/gsihSpeech.png'
+import gsihSpeech from './assets/gsihSpeech.png';
+import stockx from './assets/stockx.png';
+import hackathon from './assets/hackathon.jpg'
 
 
 var data = {};
@@ -38,20 +40,37 @@ data.applications = [
         shoes: 
         [
             {
+            id: 22,
+            name: 'StockX',
+            description: "Created number of employee- and customer-facing tools for StockX. Captained multiple award-winning project at first-ever StockX Hackathon.",
+            stack: "React, Redux, Typescript, Koa, Express, Jest, PostgreSQL, Chromium, InVision, Jira, Playwright",
+            team: true,
+            teammates: 'Brittany Johnson, Clint Andrews, Henry Morrow, Justin Wright, Sean Walsh',
+            open: false,
+            image: stockx,
+            imgLink: hackathon,
+            },
+        ]}, 
+    { 
+        row: '4',
+        shoes: 
+        [
+            {
             id: 21,
-            name: 'Social Nights',
+            name: 'Spot Nite',
             description: "Interactive online party game for music selection",
             stack: "Vue, Redis, Socket.io, Passport, MongoDB, SpotifyAPI",
             link: 'https://github.com/grungebob/Spot-Nite',
             github: 'https://github.com/grungebob/Spot-Nite',
             team: true,
             teammates: 'Michael Panetta, Jacob Johnston',
+            open: true,
             image: socialnightsimage,
             imgLink: socialnightsimage
             },
         ]}, 
     { 
-        row: 4,
+        row: 3,
         shoes: 
         [
             {
@@ -63,13 +82,14 @@ data.applications = [
             github: 'https://github.com/grungebob/Sweet-Spot',
             team: false,
             teammates: 'Solo',
+            open: true,
             image: sweetSpotImage,
             imgLink: sweetSpotImage,
             },
 
         ]}, 
     {
-        row: 3,
+        row: 2,
         shoes: 
         [
             {
@@ -81,6 +101,7 @@ data.applications = [
             github: 'https://github.com/grungebob/Sneakatory',
             team: false,
             teammates: 'Solo',
+            open: true,
             image: sneakatory,
             imgLink: sneakatory,
             },
@@ -153,7 +174,7 @@ data.applications = [
                     {
                     id: 31,
                     type: 'Marketing',
-                    name: 'Korner: Commercial',
+                    name: 'Korner - Commercial',
                     description: ['Produced, managed, and edited commercial for smarthome startup Korner.', 'Managed script language with CEO of company, negotiated deal with film crew, and managed animation team.', 'Arranged footage, recorded voiceover, and edited all audio.'],
                     team: true,
                     teammates: 'Steve Hollis, Jordan Serra, Nicholas Hewitt',
@@ -188,7 +209,7 @@ data.applications = [
                     shoes: [
                         {
                         id: 36,
-                        name: 'Korner: Indiegogo Campaign',
+                        name: 'Korner - Indiegogo Campaign',
                         type: 'Marketing',
                         description: ['Manager of crowdfunding campaign raising over $430,000.', 'Executed social media and marketing strategies,', 'including viral pre-funding campaign with over 500 email acquisitions per day.'],
                         team: true,
