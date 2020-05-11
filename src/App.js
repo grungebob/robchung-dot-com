@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './assets/logo.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Shelf from './components/Shelf.js';
 import data from './data.js';
@@ -21,27 +21,35 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={`App ${this.state.view === 'media' ? 'marketing' : this.state.view}`}>
+        <nav class="navbar navbar-light navbar-expand-lg options">
+          <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"
+          aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="animated-icon3"><span></span><span></span><span></span></div>
+        </button>
+            <div class="navbar-collapse collapse" id="collapsingNavbarSm">
+            <ul className = "options">
+              <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
+              <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media & Marketing</li>
+              <li className = {this.state.view === 'dreams' ? 'active' : 'inactive'} onClick={() => this.changeView('dreams')} > Dreams </li>                     
+              <li className = {this.state.view === 'contact' ? 'active' : 'inactive'} onClick={() => this.changeView('contact')} > Contact </li>           
+            </ul>
+          </div>
+        </nav>
         <header className="App-header"> 
           <h1 className="App-title" onClick={() => this.changeView('home')}>ROBERT CHUNG</h1>
-        </header>   
-        <ul className = "content">
-          <li className={this.state.view === 'applications' ? 'active' : 'inactive'} onClick={() => this.changeView('applications')}> Applications </li> 
-          <li className={this.state.view === 'media' ? 'active' : 'inactive'} onClick={() => this.changeView('media')}> Media & Marketing</li>
-          <li className = {this.state.view === 'dreams' ? 'active' : 'inactive'} onClick={() => this.changeView('dreams')} > Dreams </li>                     
-          <li className = {this.state.view === 'contact' ? 'active' : 'inactive'} onClick={() => this.changeView('contact')} > Contact </li>           
-        </ul>
+        </header>
           {
             this.state.view === 'home' ?
             <p className="new-intro">
-              Full-Stack Software Engineer from Pittsburgh<br/>
-              I love Web Development, Social Innovation, and Tacos<br/>
+              Full-Stack Software Engineer at StockX from Pittsburgh <br/>
+              I love Web Development, Design Thinking, and Social Innovation<br/>
             </p>
             :
             this.state.view === 'applications' ?
             <p className="new-intro">
-              Full-Stack Software Engineer from Pittsburgh<br/>
-              I love Web Development, Social Innovation, and Tacos<br/>
+              Full-Stack Software Engineer at StockX from Pittsburgh<br/>
+              I love Web Development, Design Thinking, and Social Innovation<br/>
               Strengths: Node, VueJS, React, Express, AngularJS, SQL, Redis, Sockets
               <Shelf shelf={this.state.data[this.state.view]} />
             </p>

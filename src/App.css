@@ -1,7 +1,27 @@
 .App {
   text-align: center;
   background-color: #222;
-  height: 310vh;
+  width: 100%;
+}
+
+.home {
+  height: 100vh;
+}
+
+.applications {
+  height: 240vh;
+}
+
+.marketing {
+  height: 305vh;
+}
+
+.dreams {
+  height: 300vh;
+}
+
+.contact {
+  height: 100vh;
 }
 
 .App-logo {
@@ -11,11 +31,11 @@
 
 .App-header {
   overflow: hidden;
-  position: fixed;
+  position: relative;
   background-color: #222;
-  top: 0;
+  top: 5;
   width: 100%;
-  height: 15vh;
+  height: 25vh;
   padding: 2vh;
   color: white;
   z-index: 1;
@@ -24,10 +44,11 @@
 .App-title {
   font-size: 2em;
   text-align: center;
+  margin-bottom: 2vh;
 }
 
 .App-intro {
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 15vh;
   background: #222;
@@ -42,11 +63,11 @@
 .new-intro {
   /* position: fixed; */
   width: 100%;
-  top: 11vh;
+  top: 13vh;
   /* background: #222; */
   height: 12vh;
-  padding-top: 1vh;
-  font-size: 2em;
+  padding-top: 3vh;
+  font-size: 1.75em;
   font-family: 'BebasNeue', Fallback, sans-serif;
   color: #fff;
 }
@@ -70,23 +91,26 @@ h1 {
   /* Base font size */
   font-size: 3vh;
   text-align: center;
-  margin: auto auto;
+  margin: auto;
+  margin-top: 3vh;
   /* Set neon color */
-  --neon-text-color: #f40;
-  --neon-border-color: #08f;
-  font-family: 'Neon80sRegular', 'Exo 2', sans-serif;
+  --neon-text-color: rgb(177, 49, 2);
+  --neon-border-color: rgb(0, 99, 186);
+  font-family: 'Neon80sRegular', 'Gruppo', 'Exo 2', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: .4vh;
   font-weight: 200;
   font-style: italic;
-  color: rgb(255, 225, 225);
+  color: rgb(244, 190, 190);
   padding: 1rem 1.5rem 1rem 1.5rem;
-  border: 0.4rem solid rgb(223, 250, 255);
+  border: 0.4rem solid rgb(172, 233, 244);
   border-radius: 3rem;
-  animation: flicker 20s infinite alternate;
+  animation: flicker 10s infinite alternate;
   width: 30vw;
+  text-shadow: 0 0 3vw;
+  z-index: 1;
 }
 h1::-moz-selection {
   background-color: var(--neon-border-color);
@@ -103,23 +127,27 @@ h1:focus {
 @keyframes flicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         text-shadow:
-            -0.2rem -0.2rem 1rem rgb(255, 134, 134),
-            0.2rem 0.2rem 1rem rgb(255, 134, 134),
-            0 0 2rem var(--neon-text-color),
-            0 0 4rem var(--neon-text-color),
-            0 0 6rem var(--neon-text-color),
-            0 0 8rem var(--neon-text-color),
-            0 0 10rem var(--neon-text-color);
+            .25rem .25rem 1vw rgb(255, 134, 134),
+            .25rem .25rem 3vw rgb(255, 134, 134),
+            0rem .25rem 11vw var(--neon-text-color),
+            0rem .25rem 11.5vw var(--neon-text-color),
+            0rem .25rem .4vw var(--neon-text-color),
+            0rem .25rem .5vw var(--neon-text-color),
+            .25rem .25rem .1vw var(--neon-text-color);
         box-shadow:
-            0 0 .5rem rgb(129, 205, 255),
-            inset 0 0 .5rem rgb(129, 205, 255),
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color),
-            0 0 4rem var(--neon-border-color),
-            inset 0 0 4rem var(--neon-border-color);
+            .25rem .25rem .5rem rgb(129, 205, 255),
+            inset .25rem .25rem .5rem rgb(129, 205, 255),
+            .25rem .25rem 2rem var(--neon-border-color),
+            inset .25rem .25rem 2rem var(--neon-border-color),
+            .25rem .25rem 4rem var(--neon-border-color),
+            inset .25rem .25rem 4rem var(--neon-border-color);
     }
     20%, 24%, 55% {
-        text-shadow: none;
+        text-shadow: 
+          0 0 1vw var(--neon-text-color),
+          0 0 3vw var(--neon-text-color), 
+          0 0 10vw var(--neon-text-color), 
+          0 0 10vw var(--neon-text-color), 0 0 .4vw var(--neon-text-color), .5vw .5vw .1vw var(--neon-text-color);
         box-shadow: none;
     }
 }
@@ -160,23 +188,23 @@ src: url('//thenewcode.com/assets/fonts/neon-webfont.woff') format('woff'),
 
 /* App Content */
 
-.content {
-  margin-top: 18vh;
-  padding-top: 10vh;
+.options {
+  margin-bottom: 3vh;
+  padding-top: 1vh;
   background: #222;
   color: #ffffff;
 }
 
 .active{
   color: #08f;
-  font-size: 2em;
+  font-size: 1.75em;
   font-family: 'BebasNeue', Fallback, sans-serif;
   margin: 2em 2em 2em 2em;
 }
 
 .inactive{
   color: #fff;
-  font-size: 2em;
+  font-size: 1.75em;
   font-family: 'BebasNeue', Fallback, sans-serif;
   margin: 2em 2em 2em 2em;
 }
@@ -353,3 +381,175 @@ ul li {
   display:inline;
 }
 
+
+/* Hamburger Icon */
+
+/* Icon 1 */
+
+.animated-icon1, .animated-icon2, .animated-icon3 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  }
+  
+  .animated-icon1 span, .animated-icon2 span, .animated-icon3 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  }
+  
+  .animated-icon1 span {
+  background: #e65100;
+  }
+  
+  .animated-icon2 span {
+  background: #e3f2fd;
+  }
+  
+  .animated-icon3 span {
+  background: #f3e5f5;
+  }
+  
+  .animated-icon1 span:nth-child(1) {
+  top: 0px;
+  }
+  
+  .animated-icon1 span:nth-child(2) {
+  top: 10px;
+  }
+  
+  .animated-icon1 span:nth-child(3) {
+  top: 20px;
+  }
+  
+  .animated-icon1.open span:nth-child(1) {
+  top: 11px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  }
+  
+  .animated-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+  }
+  
+  .animated-icon1.open span:nth-child(3) {
+  top: 11px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  }
+  
+  /* Icon 3*/
+  
+  .animated-icon2 span:nth-child(1) {
+  top: 0px;
+  }
+  
+  .animated-icon2 span:nth-child(2), .animated-icon2 span:nth-child(3) {
+  top: 10px;
+  }
+  
+  .animated-icon2 span:nth-child(4) {
+  top: 20px;
+  }
+  
+  .animated-icon2.open span:nth-child(1) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+  }
+  
+  .animated-icon2.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  }
+  
+  .animated-icon2.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  }
+  
+  .animated-icon2.open span:nth-child(4) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+  }
+  
+  /* Icon 4 */
+  
+  .animated-icon3 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  }
+  
+  .animated-icon3 span:nth-child(2) {
+  top: 10px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  }
+  
+  .animated-icon3 span:nth-child(3) {
+  top: 20px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  }
+  
+  .animated-icon3.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0px;
+  left: 8px;
+  }
+  
+  .animated-icon3.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+  }
+  
+  .animated-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 21px;
+  left: 8px;
+  }
